@@ -12,56 +12,56 @@
 
 <body>
     <main class="min-h-screen bg-[#010313] bg-[url(images/background.png)] bg-no-repeat bg-center">
-        <section class="home-screen text-white hidden">
+        <section id="home-screen" class="text-white ">
             <div class="flex flex-col items-center min-h-screen justify-center gap-10">
                 <h1 class="antor text-9xl">ALPHABET CLASH</h1>
                 <p>Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
-                <button class="btn bg-white text-black font-bold">Play Now</button>
+                <button onclick="play()" class="btn bg-white text-black font-bold">Play Now</button>
             </div>
         </section>
-        <section class="play-ground hidden">
+        <section id="play-ground" class="hidden">
             <div class="flex flex-col items-center gap-10">
                 <div class="artboard artboard-horizontal phone-6 bg-[#FFFFFFB3] border-[20px] border-[#010313CC]  mt-8">
                     <div class="flex justify-center ">
                         <p class="text-white bg-[#010313CC] px-6 pb-4 rounded-b-lg" >Don't watch keyboard  while playing...</p>
                     </div>
                     <div class="flex justify-center min-h-full items-center">
-                        <p class="text-black text-7xl font-extrabold  ">Y</p>
+                        <p id="displayText" class="text-black text-7xl font-extrabold  uppercase">Y</p>
                     </div>
                 </div>
-                <div class="keyboard">
-                    <div class="flex justify-center gap-1 my-1 w-full">
-                        <kbd class="kbd">q</kbd>
-                        <kbd class="kbd">w</kbd>
-                        <kbd class="kbd">e</kbd>
-                        <kbd class="kbd">r</kbd>
-                        <kbd class="kbd">t</kbd>
-                        <kbd class="kbd">y</kbd>
-                        <kbd class="kbd">u</kbd>
-                        <kbd class="kbd">i</kbd>
-                        <kbd class="kbd">o</kbd>
-                        <kbd class="kbd">p</kbd>
+                <div class="keyboard text-black">
+                    <div class="flex justify-center gap-1 my-1 w-full ">
+                        <kbd id="q" class="kbd  bg-white">q</kbd>
+                        <kbd id="w" class="kbd  bg-white">w</kbd>
+                        <kbd id="e" class="kbd  bg-white">e</kbd>
+                        <kbd id="r" class="kbd  bg-white">r</kbd>
+                        <kbd id="t" class="kbd  bg-white">t</kbd>
+                        <kbd id="y" class="kbd  bg-white">y</kbd>
+                        <kbd id="u" class="kbd  bg-white">u</kbd>
+                        <kbd id="i" class="kbd  bg-white">i</kbd>
+                        <kbd id="o" class="kbd  bg-white">o</kbd>
+                        <kbd id="p" class="kbd  bg-white">p</kbd>
                       </div> 
                       <div class="flex justify-center gap-1 my-1 w-full">
-                        <kbd class="kbd">a</kbd>
-                        <kbd class="kbd">s</kbd>
-                        <kbd class="kbd">d</kbd>
-                        <kbd class="kbd">f</kbd>
-                        <kbd class="kbd">g</kbd>
-                        <kbd class="kbd">h</kbd>
-                        <kbd class="kbd">j</kbd>
-                        <kbd class="kbd">k</kbd>
-                        <kbd class="kbd">l</kbd>
+                        <kbd id="a" class="kbd  bg-white">a</kbd>
+                        <kbd id="s" class="kbd  bg-white">s</kbd>
+                        <kbd id="d" class="kbd  bg-white">d</kbd>
+                        <kbd id="f" class="kbd  bg-white">f</kbd>
+                        <kbd id="g" class="kbd  bg-white">g</kbd>
+                        <kbd id="h" class="kbd  bg-white">h</kbd>
+                        <kbd id="j" class="kbd  bg-white">j</kbd>
+                        <kbd id="k" class="kbd  bg-white">k</kbd>
+                        <kbd id="l" class="kbd  bg-white">l</kbd>
                       </div> 
                       <div class="flex justify-center gap-1 my-1 w-full">
-                        <kbd class="kbd">z</kbd>
-                        <kbd class="kbd">x</kbd>
-                        <kbd class="kbd">c</kbd>
-                        <kbd class="kbd">v</kbd>
-                        <kbd class="kbd">b</kbd>
-                        <kbd class="kbd">n</kbd>
-                        <kbd class="kbd">m</kbd>
-                        <kbd class="kbd">/</kbd>
+                        <kbd id="z" class="kbd  bg-white">z</kbd>
+                        <kbd id="x" class="kbd  bg-white">x</kbd>
+                        <kbd id="c" class="kbd  bg-white">c</kbd>
+                        <kbd id="v" class="kbd  bg-white">v</kbd>
+                        <kbd id="b" class="kbd  bg-white">b</kbd>
+                        <kbd id="n" class="kbd  bg-white">n</kbd>
+                        <kbd id="m" class="kbd  bg-white">m</kbd>
+                        <kbd id="/" class="kbd  bg-white">/</kbd>
                       </div>
                 </div>
                 <div class="flex justify-between  w-5/12 mb-20">
@@ -78,7 +78,7 @@
                 </div>
             </div>
         </section>
-        <section class="live-score min-h-screen flex flex-col justify-center items-center gap-5">
+        <section class="live-score min-h-screen flex flex-col justify-center items-center gap-5 hidden">
             <div class=" text-center items-center space-y-5 text-white bg-[#FFFFFF33] p-7 rounded-lg">
                 <h1 class="text-6xl">
                     <span class="font-extrabold">Score:</span>
@@ -89,6 +89,9 @@
             </div>
         </section>
     </main>
+
+    <script src="js/utility.js"></script>
+    <script src="js/funtion.js"></script>
 </body>
 
 </html>
